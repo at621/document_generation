@@ -1,0 +1,38 @@
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.venv
+uv.lock
+.python-version
+
+# Documents
+*.txt
+*.md
+*.parquet
+
+# Files to keep
+!**/README.md
+
+# IDE
+.vscode/
+
+# Project specific
+output/
+*.log
+.env
+.env.local
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/

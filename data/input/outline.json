@@ -1,0 +1,712 @@
+{
+  "styleguide": {
+    "overall_tone_and_style": "Technical, formal, and regulatory-compliant"
+  },
+  "metadata": {
+    "version": "1.0",
+    "created_date": "2024-05-21",
+    "author": "Document Generation System"
+  },
+  "table_of_contents": [
+    {
+      "id": "1",
+      "level": 1,
+      "heading_label": "Introduction",
+      "purpose": [
+        "To outline the methodology for developing, validating, and implementing a",
+        "macroeconomic overlay model for IFRS 9 compliance."
+      ],
+      "research_files": [
+        "data/knowledge_base/general_overview.md"
+      ],
+      "target_word_count": 400,
+      "key_topics": [
+        "To outline the methodology for developing, validating, and implementing a",
+        "macroeconomic overlay model for IFRS 9 compliance."
+      ],
+      "keywords": [
+        "IFRS 9",
+        "TTC PD",
+        "PIT PD",
+        "Macroeconomic Overlay",
+        "ECL"
+      ]
+    },
+    {
+      "id": "1.1",
+      "level": 2,
+      "heading_label": "Purpose and Objectives",
+      "purpose": [
+        "To state the document's primary purpose: outlining the methodology for a",
+        "macroeconomic overlay model to produce Point-in-Time (PIT) PDs for IFRS 9.",
+        "To establish the objective of creating a robust and transparent framework for",
+        "estimating 12-month and lifetime PIT PDs."
+      ],
+      "research_files": [
+        "data/knowledge_base/general_overview.md"
+      ],
+      "target_word_count": 400,
+      "key_topics": [
+        "This section sets the stage. It will clearly state that the document's",
+        "primary purpose is to outline the methodology for developing, validating,",
+        "and implementing a macroeconomic overlay model. This model will adjust",
+        "the bank's existing Through-the-Cycle (TTC) or hybrid Probability of",
+        "Default (PD) estimates to produce Point-in-Time (PIT), forward-looking",
+        "PDs compliant with IFRS 9 standards. It should explicitly state the",
+        "objective: to create a robust, auditable, and transparent framework for",
+        "estimating 12-month and lifetime PIT PDs."
+      ],
+      "keywords": [
+        "IFRS 9",
+        "TTC PD",
+        "PIT PD",
+        "Macroeconomic Overlay",
+        "Forward-looking PD"
+      ]
+    },
+    {
+      "id": "1.2",
+      "level": 2,
+      "heading_label": "Scope of the document",
+      "purpose": [
+        "To define the precise boundaries of the methodology."
+      ],
+      "research_files": [
+        "data/knowledge_base/general_overview.md"
+      ],
+      "target_word_count": 400,
+      "key_topics": [
+        "This section defines the precise boundaries of the methodology. It will",
+        "specify which portfolios the model applies to (e.g., corporate, SME,",
+        "specific retail segments), the geographical regions covered (e.g., EU,",
+        "specific countries), and any material exposures that are explicitly",
+        "excluded from this methodology and why."
+      ],
+      "keywords": [
+        "Scope",
+        "Portfolio",
+        "Geographies",
+        "Exclusions",
+        "Materiality"
+      ]
+    },
+    {
+      "id": "1.3",
+      "level": 2,
+      "heading_label": "Regulatory and Accounting Context",
+      "purpose": [
+        "To anchor the methodology in its IFRS 9 context by detailing the specific",
+        "requirements the model is designed to meet."
+      ],
+      "research_files": [
+        "data/knowledge_base/general_overview.md"
+      ],
+      "target_word_count": 400,
+      "key_topics": [
+        "This section anchors the methodology in its IFRS 9 context. It will detail",
+        "the specific IFRS 9 requirements that the model is designed to meet,",
+        "including the need for unbiased, the use of reasonable and supportable",
+        "forward-looking information, and the ability to generate a PD term",
+        "structure (12-month and lifetime). Each requirement should be explained",
+        "with a brief description of how this methodology addresses it."
+      ],
+      "keywords": [
+        "IFRS 9",
+        "Regulatory",
+        "Accounting",
+        "Forward-looking",
+        "PD Term Structure"
+      ]
+    },
+    {
+      "id": "2",
+      "level": 1,
+      "heading_label": "Methodological Framework",
+      "purpose": [
+        "To establish the economic rationale and high-level modeling approach for the",
+        "macroeconomic overlay."
+      ],
+      "research_files": [
+        "data/knowledge_base/general_overview.md"
+      ],
+      "target_word_count": 400,
+      "key_topics": [
+        "Conceptual Link Between Macroeconomy and PDs",
+        "Rationale for a Macro Overlay Approach",
+        "Overlay Model Options",
+        "Novel Risks"
+      ],
+      "keywords": [
+        "Methodology",
+        "Framework",
+        "Macroeconomic Overlay",
+        "Satellite Model"
+      ]
+    },
+    {
+      "id": "2.1",
+      "level": 2,
+      "heading_label": "Conceptual Link Between Macroeconomy and PDs",
+      "purpose": [
+        "To establish the economic rationale behind the model by describing how",
+        "macroeconomic factors influence corporate default risk."
+      ],
+      "research_files": [
+        "data/knowledge_base/general_overview.md"
+      ],
+      "target_word_count": 400,
+      "key_topics": [
+        "This section establishes the economic rationale behind the model. It will",
+        "describe the theoretical transmission channels through which macroeconomic",
+        "factors (like GDP growth, unemployment, interest rates) are expected to",
+        "influence corporate default risk. Channels to discuss include the",
+        "revenue/cash flow channel, asset value/collateral channel, and credit",
+        "supply/financial conditions channel. This demonstrates that the model is",
+        "based on sound economic principles, not just statistical correlation."
+      ],
+      "keywords": [
+        "Economic Rationale",
+        "Transmission Channels",
+        "Macroeconomic Factors",
+        "Default Risk"
+      ]
+    },
+    {
+      "id": "2.2",
+      "level": 2,
+      "heading_label": "Rationale for a Macro Overlay Approach",
+      "purpose": [
+        "To justify the choice of an overlay (or 'satellite model') approach instead",
+        "of redeveloping the core PD models from scratch."
+      ],
+      "research_files": [
+        "data/knowledge_base/general_overview.md"
+      ],
+      "target_word_count": 400,
+      "key_topics": [
+        "This section justifies the choice of an overlay (or 'satellite model')",
+        "approach instead of redeveloping the core PD models from scratch. It will",
+        "argue that this approach allows for the re-use of well-validated TTC",
+        "components, ensures faster implementation, and maintains consistency with",
+        "the Basel regulatory framework while satisfying IFRS 9's PIT requirements.",
+        "It explains the decomposition of the final PIT PD into PIT PD =",
+        "f(TTC PD, Macro-economic Overlay)."
+      ],
+      "keywords": [
+        "Overlay Model",
+        "Satellite Model",
+        "TTC PD",
+        "PIT PD",
+        "IFRS 9",
+        "Basel"
+      ]
+    },
+    {
+      "id": "2.3",
+      "level": 2,
+      "heading_label": "Overlay Model Options",
+      "purpose": [
+        "To provide a high-level survey of potential modeling techniques to show that",
+        "a thoughtful selection process was undertaken."
+      ],
+      "research_files": [
+        "data/knowledge_base/general_overview.md"
+      ],
+      "target_word_count": 400,
+      "key_topics": [
+        "This section provides a high-level survey of potential modeling techniques",
+        "for the overlay. It will briefly introduce and compare different model",
+        "families (e.g., regression-based models like GLM or OLS, autoregressive",
+        "models, survival analysis, machine learning models). The purpose is to",
+        "show that a thoughtful selection process was undertaken before settling on",
+        "a final approach."
+      ],
+      "keywords": [
+        "Model Selection",
+        "GLM",
+        "OLS",
+        "Autoregressive Models",
+        "Machine Learning"
+      ]
+    },
+    {
+      "id": "2.4",
+      "level": 2,
+      "heading_label": "Treatment of Novel Risks",
+      "purpose": [
+        "To address the challenge of modeling risks lacking historical precedent",
+        "and not captured by traditional macroeconomic variables."
+      ],
+      "research_files": [
+        "data/knowledge_base/general_overview.md"
+      ],
+      "target_word_count": 400,
+      "key_topics": [
+        "This section addresses the modeling challenge posed by novel and emerging",
+        "risks not adequately represented in historical datasets. It will outline",
+        "the framework's approach to incorporating factors like climate change risks",
+        "(both physical and transition), pandemic-related economic disruptions, and",
+        "significant geopolitical shifts. The discussion will cover the use of",
+        "qualitative overlays, where expert judgment is applied to adjust model",
+        "outputs based on specific forward-looking narratives. It will also explore",
+        "the use of scenario analysis with bespoke assumptions and the search for",
+        "appropriate proxy variables to ensure the framework remains robust and",
+        "responsive to an evolving risk landscape."
+      ],
+      "keywords": [
+        "Novel Risks",
+        "Climate Risk",
+        "Pandemic",
+        "Geopolitical Risk",
+        "Scenario Analysis",
+        "Expert Judgment",
+        "Qualitative Overlay"
+      ]
+    },
+    {
+      "id": "3",
+      "level": 1,
+      "heading_label": "Data",
+      "purpose": [
+        "To detail the data sources, quality assurance processes, and the final",
+        "sample construction for model development."
+      ],
+      "research_files": [
+        "data/knowledge_base/general_overview.md"
+      ],
+      "target_word_count": 400,
+      "key_topics": [
+        "Source Inventory",
+        "Data Quality Assessment",
+        "Segmentation Development Sample Definition"
+      ],
+      "keywords": [
+        "Data",
+        "Data Quality",
+        "Time Series",
+        "Segmentation",
+        "Development Sample"
+      ]
+    },
+    {
+      "id": "3.1",
+      "level": 2,
+      "heading_label": "Source Inventory",
+      "purpose": [
+        "To list the internal and external data sources used in model development."
+      ],
+      "research_files": [
+        "data/knowledge_base/general_overview.md"
+      ],
+      "target_word_count": 400,
+      "key_topics": [
+        "This section lists typical data used in the model development. It will detail",
+        "internal data sources (e.g., default data, loan characteristics, TTC PDs",
+        "from the data warehouse) and external data sources (e.g., macroeconomic",
+        "variables from central banks, statistical offices, or third-party",
+        "providers like Bloomberg)."
+      ],
+      "keywords": [
+        "Data Sources",
+        "Internal Data",
+        "External Data",
+        "Data Warehouse"
+      ]
+    },
+    {
+      "id": "3.2",
+      "level": 2,
+      "heading_label": "Data Quality Assessment",
+      "purpose": [
+        "To detail the steps taken to ensure all data is fit for purpose."
+      ],
+      "research_files": [
+        "data/knowledge_base/general_overview.md"
+      ],
+      "target_word_count": 400,
+      "key_topics": [
+        "This section details the steps taken to ensure data is fit for purpose. It",
+        "will describe checks for completeness, accuracy, and consistency. It will",
+        "also outline the preferred treatment of missing values (e.g., imputation",
+        "methods), outliers, and any structural breaks identified in the time series",
+        "(e.g., due to macropolitical changes or major economic events)."
+      ],
+      "keywords": [
+        "Data Quality",
+        "Completeness",
+        "Accuracy",
+        "Missing Values",
+        "Outliers"
+      ]
+    },
+    {
+      "id": "3.3",
+      "level": 2,
+      "heading_label": "Segmentation Development Sample Definition",
+      "purpose": [
+        "To describe the construction of the dataset used for modeling."
+      ],
+      "research_files": [
+        "data/knowledge_base/general_overview.md"
+      ],
+      "target_word_count": 400,
+      "key_topics": [
+        "This section describes the construction of the dataset used for modeling. It",
+        "will define the criteria for including a obligor in the sample, the",
+        "observation period (e.g., Jan 2005 - Dec 2023), and the unit of",
+        "observation (e.g., obligor-month). It will also justify any segmentation",
+        "of the portfolio (e.g., by industry, geography, or rating level) for",
+        "developing separate models if needed."
+      ],
+      "keywords": [
+        "Development Sample",
+        "Segmentation",
+        "Obligor",
+        "Observation Period"
+      ]
+    },
+    {
+      "id": "4",
+      "level": 1,
+      "heading_label": "Transformations and Exploratory Data Analysis",
+      "purpose": [
+        "To document the process of preparing and analyzing the macroeconomic data",
+        "prior to variable selection and modeling."
+      ],
+      "research_files": [
+        "data/knowledge_base/transformations_shortlist.md"
+      ],
+      "target_word_count": 400,
+      "key_topics": [
+        "Long List of Variables",
+        "Common Transformations",
+        "Analysis of Macro Variables"
+      ],
+      "keywords": [
+        "EDA",
+        "Data Transformation",
+        "Macroeconomic Variables",
+        "Time Series"
+      ]
+    },
+    {
+      "id": "4.1",
+      "level": 2,
+      "heading_label": "Long List of Variables",
+      "purpose": [
+        "To compile and justify a comprehensive 'long-list' of candidate",
+        "macroeconomic variables grounded in economic theory."
+      ],
+      "research_files": [
+        "data/knowledge_base/methodological_overview.md"
+      ],
+      "target_word_count": 400,
+      "key_topics": [
+        "The selection process begins by compiling a comprehensive 'long-list' of",
+        "candidate macroeconomic variables. This list is not chosen arbitrarily;",
+        "it is grounded in economic theory and empirical evidence, linking directly",
+        "to the credit risk transmission channels discussed in Section 2.1. This",
+        "section will present the full set of variables initially considered,",
+        "grouped by economic category (e.g., Real Economy, Financial Conditions,",
+        "Asset Prices), and provide the textbook justification or empirical",
+        "rationale for why each was considered a plausible driver of default behavior."
+      ],
+      "keywords": [
+        "Variable Selection",
+        "Long-list",
+        "Candidate Variables",
+        "Economic Theory"
+      ]
+    },
+    {
+      "id": "4.2",
+      "level": 2,
+      "heading_label": "Common Transformations",
+      "purpose": [
+        "To document the specific transformations applied to raw data and the",
+        "rationale for each."
+      ],
+      "research_files": [
+        "data/knowledge_base/transformations_shortlist.md"
+      ],
+      "target_word_count": 400,
+      "key_topics": [
+        "This section documents the specific transformations applied to the raw data.",
+        "It will explain the rationale for using lags (to capture delayed effects),",
+        "differences or growth rates (to achieve stationarity and capture momentum),",
+        "or non-linear transformations (e.g., polynomial terms, splines) to better",
+        "capture the relationship between macro-drivers and defaults."
+      ],
+      "keywords": [
+        "Data Transformation",
+        "Lags",
+        "Differences",
+        "Stationarity",
+        "Non-linear"
+      ]
+    },
+    {
+      "id": "4.3",
+      "level": 2,
+      "heading_label": "Analysis of Macro Variables",
+      "purpose": [
+        "To explore the statistical properties of the potential explanatory variables",
+        "to inform how they should be transformed for modeling."
+      ],
+      "research_files": [
+        "data/knowledge_base/transformations_shortlist.md"
+      ],
+      "target_word_count": 400,
+      "key_topics": [
+        "This section explores the potential explanatory variables. It will include",
+        "time-series plots, summary statistics, and correlation matrices for the",
+        "long-list of macroeconomic variables. The analysis will check for",
+        "stationarity (e.g., using ADF tests) and seasonality, which informs how",
+        "variables need to be transformed (e.g., using differences, lags, or",
+        "growth rates). Present a list statistical and qualitative checks that has",
+        "to be performed for each variable."
+      ],
+      "keywords": [
+        "EDA",
+        "Macroeconomic Variables",
+        "Stationarity",
+        "ADF Test",
+        "Seasonality"
+      ]
+    },
+    {
+      "id": "5",
+      "level": 1,
+      "heading_label": "Variable Selection",
+      "purpose": [
+        "To outline the structured process for reducing the long-list of variables",
+        "to a final, robust, and parsimonious shortlist for modeling."
+      ],
+      "research_files": [
+        "data/knowledge_base/methodological_overview.md"
+      ],
+      "target_word_count": 400,
+      "key_topics": [
+        "Initial Screening and Filtering",
+        "Desired Short List Properties",
+        "Dimensionality Reduction Options"
+      ],
+      "keywords": [
+        "Variable Selection",
+        "Filtering",
+        "Shortlist",
+        "Dimensionality Reduction"
+      ]
+    },
+    {
+      "id": "5.1",
+      "level": 2,
+      "heading_label": "Initial Screening and Filtering",
+      "purpose": [
+        "To compile and justify a comprehensive 'long-list' of candidate",
+        "macroeconomic variables grounded in economic theory."
+      ],
+      "research_files": [
+        "data/knowledge_base/methodological_overview.md"
+      ],
+      "target_word_count": 400,
+      "key_topics": [
+        "The selection process begins by compiling a comprehensive 'long-list' of",
+        "candidate macroeconomic variables. This list is not chosen arbitrarily;",
+        "it is grounded in economic theory and empirical evidence. This section will",
+        "present the full set of variables initially considered, grouped by economic",
+        "category (e.g., Real Economy, Financial Conditions, Asset Prices), and",
+        "provide the textbook justification or empirical rationale for why each was",
+        "considered a plausible driver of default behavior."
+      ],
+      "keywords": [
+        "Variable Selection",
+        "Screening",
+        "Filtering",
+        "Long-list",
+        "Economic Rationale"
+      ]
+    },
+    {
+      "id": "5.2",
+      "level": 2,
+      "heading_label": "Desired Short List Properties",
+      "purpose": [
+        "To explain the criteria beyond statistical performance used to select the",
+        "final shortlist of variables for the model."
+      ],
+      "research_files": [
+        "data/knowledge_base/methodological_overview.md"
+      ],
+      "target_word_count": 400,
+      "key_topics": [
+        "Overview: This crucial section explains the criteria used to select the final",
+        "shortlist from the statistically significant candidates. A variable's inclusion",
+        "is not based on statistical performance alone; it must also satisfy several",
+        "practical and qualitative requirements essential for a robust and compliant",
+        "IFRS 9 model. This section will detail the desired properties of the final",
+        "variable set, including:",
+        " Economic Intuition: The relationship must be logical and explainable.",
+        " Forecast Availability: The variable must be reliably forecastable under",
+        "multiple scenarios from an auditable source.",
+        " Stability: The historical relationship should be stable across different",
+        "economic regimes.",
+        " Parsimony: The final set should be as simple as possible to avoid overfitting",
+        "and enhance interpretability.",
+        " The final combination of variables will be presented here, along with a",
+        "concluding rationale for why this set is considered the most robust and",
+        "sensible choice."
+      ],
+      "keywords": [
+        "Shortlist",
+        "Economic Intuition",
+        "Forecastability",
+        "Stability",
+        "Parsimony"
+      ]
+    },
+    {
+      "id": "5.3",
+      "level": 2,
+      "heading_label": "Dimensionality Reduction Options",
+      "purpose": [
+        "To describe the final, structured review process that combines statistical",
+        "evidence with expert judgment to select the final variable shortlist."
+      ],
+      "research_files": [
+        "data/knowledge_base/methodological_overview.md"
+      ],
+      "target_word_count": 400,
+      "key_topics": [
+        "This section describes the crucial final stage of the variable selection",
+        "process: the deliberative exercise of moving from the quantitatively",
+        "screened list of candidates to the final, parsimonious shortlist used for",
+        "model development. This is not a purely mechanical step; it is a",
+        "structured, multi-faceted review process that combines statistical evidence",
+        "with expert judgment to ensure the final model is robust, sensible, and fit",
+        "for purpose under IFRS 9. The outcome is documented in a selection table,",
+        "where each candidate variable is scored against the key criteria (e.g.,",
+        "statistical power, economic rationale, forecastability, stability). This",
+        "creates a transparent audit trail that clearly justifies the final decision,",
+        "explaining not only why certain variables were chosen, but also why others",
+        "were rejected. The result is a final, defensible shortlist that is",
+        "statistically sound, operationally viable, and aligned with the core",
+        "principles of IFRS 9."
+      ],
+      "keywords": [
+        "Dimensionality Reduction",
+        "Expert Judgment",
+        "Selection Matrix",
+        "Audit Trail"
+      ]
+    },
+    {
+      "id": "6",
+      "level": 1,
+      "heading_label": "Model Development Process",
+      "purpose": [
+        "To detail the complete process of constructing, specifying, benchmarking,",
+        "and evaluating the final macroeconomic overlay model."
+      ],
+      "research_files": [
+        "data/knowledge_base/methodological_overview.md"
+      ],
+      "target_word_count": 400,
+      "key_topics": [
+        "Challenger Model Development and Benchmarking",
+        "Model Specification and Estimation",
+        "Model Performance Evaluation"
+      ],
+      "keywords": [
+        "Model Development",
+        "Benchmarking",
+        "Specification",
+        "Estimation",
+        "Performance"
+      ]
+    },
+    {
+      "id": "6.1",
+      "level": 2,
+      "heading_label": "Challenger Model Development and Benchmarking",
+      "purpose": [
+        "To ensure the selected model is optimal by developing and benchmarking it",
+        "against one or more viable alternative (challenger) models."
+      ],
+      "research_files": [
+        "data/knowledge_base/methodological_overview.md"
+      ],
+      "target_word_count": 400,
+      "key_topics": [
+        "To ensure the selected model is not just adequate but optimal among viable",
+        "alternatives, a challenger model framework is employed. This involves",
+        "developing one or more alternative models to compete against the champion.",
+        "This process strengthens the final model choice and provides valuable",
+        "insights into the stability and sensitivity of different approaches. The",
+        "development of challengers is structured around testing different",
+        "hypotheses about the underlying data and relationships."
+      ],
+      "keywords": [
+        "Challenger Model",
+        "Champion Model",
+        "Benchmarking",
+        "Model Selection"
+      ]
+    },
+    {
+      "id": "6.2",
+      "level": 2,
+      "heading_label": "Model Specification and Estimation",
+      "purpose": [
+        "To detail the final chosen model's mathematical form and report its",
+        "estimated parameters and their statistical significance."
+      ],
+      "research_files": [
+        "data/knowledge_base/methodological_overview.md"
+      ],
+      "target_word_count": 400,
+      "key_topics": [
+        "This section details the final chosen model's mathematical form. It will",
+        "present the model equation (e.g., the logistic regression formula), define",
+        "all its components, and report the estimated coefficients, their signs, and",
+        "statistical significance (p-values). The sign of each coefficient must be",
+        "checked for economic intuition."
+      ],
+      "keywords": [
+        "Model Specification",
+        "Estimation",
+        "Coefficients",
+        "P-values",
+        "Economic Intuition"
+      ]
+    },
+    {
+      "id": "6.3",
+      "level": 2,
+      "heading_label": "Model Performance Evaluation",
+      "purpose": [
+        "To rigorously assess the final model's performance on historical data using",
+        "a variety of quantitative metrics."
+      ],
+      "research_files": [
+        "data/knowledge_base/methodological_overview.md"
+      ],
+      "target_word_count": 400,
+      "key_topics": [
+        "This section rigorously assesses the model's performance on historical data.",
+        "It will present key performance metrics for goodness-of-fit (e.g., R-squared,",
+        "AUC), accuracy (e.g., Brier score), and stability (e.g., parameter",
+        "stability tests across different time periods). The evaluation should be",
+        "performed on both the development sample (in-sample) and a holdout sample",
+        "(out-of-time) to test for overfitting."
+      ],
+      "keywords": [
+        "Model Performance",
+        "Evaluation",
+        "Goodness-of-fit",
+        "AUC",
+        "Backtesting"
+      ]
+    }
+  ]
+}
